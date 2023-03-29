@@ -1,12 +1,16 @@
-
 <script>
+
 export default {
-    name: ''
+    name: 'Main'
 }
+
 </script>
 
 <template>
    
+   <div>prova</div>
+
+
 </template>
 
 <style lang="scss" scoped>
