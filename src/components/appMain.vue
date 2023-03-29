@@ -6,13 +6,6 @@ export default {
 
 </script>
 
-<template>
-   
-   <div>prova</div>
+<template></template>
 
-
-</template>
-
-<style lang="scss" scoped>
-   
-</style>
+<style lang="scss" scoped></style>
