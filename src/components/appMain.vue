@@ -1,11 +1,19 @@
 <script>
 
+import cardApp from './cardApp.vue';
 export default {
-    name: 'Main'
+    name: 'Main',
+    components:{
+        cardApp,
+    }
 }
 
 </script>
 
-<template></template>
+<template>
+
+    <cardApp></cardApp>
+    
+</template>
 
 <style lang="scss" scoped></style>
