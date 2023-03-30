@@ -3,7 +3,7 @@
 import CountryFlag from 'vue-country-flag-next'
 import { store } from '../store';
 export default {
-    name: 'CardApp',
+    name: 'movieApp',
     components: {
         CountryFlag,
     },
@@ -24,17 +24,16 @@ export default {
             return movie.vote_average / 2;
         }
     },
-    
+
     emits: ["searchName"]
-
 }
-
 
 </script>
 
 <template>
-
-    <ul>
+    
+<div>
+    <ul class="background_color">
         <li v-for="movie in store.movies">
             <h4> {{ movie.title }}</h4>
             <ul>
@@ -45,7 +44,13 @@ export default {
             </ul>
         </li>
     </ul>
+</div>
     
 </template>
 
-<style lang="scss" scoped></style>
+<style lang="scss" scoped>
+.background_color{
+    background-color: rgb(49, 83, 83);
+}
+
+</style>

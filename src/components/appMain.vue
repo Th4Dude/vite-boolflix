@@ -1,10 +1,13 @@
 <script>
 
-import cardApp from './cardApp.vue';
+import movieApp from './movieApp.vue';
+import seriesCard from './seriesCard.vue';
+
 export default {
     name: 'Main',
     components:{
-        cardApp,
+        movieApp,
+        seriesCard,
     }
 }
 
@@ -12,8 +15,9 @@ export default {
 
 <template>
 
-    <cardApp></cardApp>
-    
+    <movieApp></movieApp>
+    <seriesCard></seriesCard>
+
 </template>
 
 <style lang="scss" scoped></style>
