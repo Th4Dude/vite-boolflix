@@ -62,7 +62,7 @@ export default {
 
 <style lang="scss" scoped>
 .background_color{
-    background-color: aqua;
+    background-color: #00fff9;
 }
 
 </style>
