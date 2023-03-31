@@ -44,7 +44,7 @@ export default {
     
 <div class="main-box">
         <div class="box-title">
-            <h1 class="title">SERIES</h1>
+            <h1 class="title"><em> $ERIE$  	&#169; </em></h1>
         </div>
         <div class="container-series">
             <div class="series flip-card" v-for="serie in store.series">
@@ -78,14 +78,14 @@ export default {
     width: 100%;
     padding: 30px 10px;
     img {
-        max-height: 100%;
+        height: 100%;
         width: 100%;
         border-radius: 10px;
     }
 
     .series {
         display: flex;
-        justify-content: center;
+        justify-content: space-around;
         align-items: center;
         width: calc(100% / 5 - 1.25rem);
     }
@@ -94,18 +94,18 @@ export default {
         width: 100%;
         background-color: #00b8ff;
         border: 2px solid #ff00c1;
+        padding: 20px 0 ;
     }
     .title{
         text-align: center;
+        color: #ff00c1;
     }
 
 .flip-card {
     background-color: transparent;
     width: 100%;
     height: 614px;
-    
     perspective: 1000px;
-    /* Remove this if you don't want the 3D effect */
 }
 
 /* This container is needed to position the front and back side */
@@ -130,22 +130,21 @@ export default {
     width: 100%;
     height: 100%;
     -webkit-backface-visibility: hidden;
-    /* Safari */
     backface-visibility: hidden;
 }
 
-/* Style the front side (fallback if image is missing) */
-.flip-card-front {
-    /*   background-color: #bbb; */
+/* .flip-card-front {
     color: black;
-}
+} */
 
 /* Style the back side */
 .flip-card-back {
     background-color: #ff00c1;
+    width: 100%;
+    height: 100%;
     color: white;
-    transform: rotateY(180deg);
     border-radius: 10px;
+    transform: rotateY(180deg);
 }
 
 </style>

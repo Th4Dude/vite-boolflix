@@ -59,7 +59,6 @@ export default {
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
-
     height: 200px;  
     width: 100%;
    
@@ -73,6 +72,10 @@ button{
     height: 30px;
     margin-left: 15px;
     color: #ff00c1;
+}
+button:hover {
+    transform: scale(1.5);
+    transition: all 0.4s ease-out;
 }
 input{
     background-color: #4900ff;

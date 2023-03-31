@@ -1,9 +1,13 @@
 @use '_partial/reset' as *;
 @use '_partial/variables' as *;
 
+
+
+
 body {
-    background-color: white;
-}
+    font-family: "Montserrat";
+    background-color: #f9ac53;
+  }
 *{
     padding: 0;
     margin: 0;
