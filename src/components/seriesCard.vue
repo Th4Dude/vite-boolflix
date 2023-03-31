@@ -51,7 +51,8 @@ export default {
                 <li>{{ serie.original_name }}</li>
                 <li>{{ serie.original_language }}</li>
                 <li><country-flag :country='getLanguage(serie)' size='small' /></li>
-                <li>{{ getVote(serie) }}</li>
+                <font-awesome-icon icon="fa-solid fa-star" v-for="star in getVote(serie)" />
+                <font-awesome-icon icon="fa-regular fa-star" v-for="star in 5-getVote(serie)" />
             </ul>
         </li>
     </ul>

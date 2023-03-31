@@ -49,7 +49,9 @@ export default {
                 <li>{{ movie.original_title }}</li>
                 <li>{{ movie.original_language }}</li>
                 <li><country-flag :country='getLanguage(movie)' size='small' /></li>
-                <li>{{ getVote(movie) }}</li>
+                <font-awesome-icon icon="fa-solid fa-star" v-for="star in getVote(movie)" />
+                <font-awesome-icon icon="fa-regular fa-star" v-for="star in 5-getVote(movie)" />
+                
             </ul>
         </li>
     </ul>
