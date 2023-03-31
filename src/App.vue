@@ -17,9 +17,14 @@ export default {
             store
         }
     },
+
+    /* Chiamate al server */
+
     methods: {
         search() {
-            console.log('ho ascoltato questo evento');
+
+            /* Chiamata per movie */
+
             axios.get(store.config.url_movies, {
                 params: {
                     api_key: store.config.apiKey,
@@ -31,8 +36,11 @@ export default {
                     console.log(this.store.movies);
                 })
 
-                
-                axios.get(store.config.ulr_series, {
+            /* Chiamata per movie */
+
+            /* Chiamata per serie */
+
+            axios.get(store.config.ulr_series, {
                 params: {
                     api_key: store.config.apiKey,
                     query: store.searchText
@@ -42,22 +50,20 @@ export default {
                     this.store.series = response.data.results;
                     console.log(this.store.series);
                 })
+
+            /* Chiamata per serie */
         }
     }
+
+    /* Chiamate al server */
 }
 
 </script>
 
 <template>
-
     <appHeader @searchName="search"></appHeader>
     <appMain></appMain>
-    
 </template>
 
 
-<style lang="scss">
-    
-
-
-</style>
+<style lang="scss"></style>

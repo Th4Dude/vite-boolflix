@@ -30,40 +30,64 @@ export default {
                 return "https://upload.wikimedia.org/wikipedia/commons/thumb/5/5e/%22Evolution%22_and_life_in_vaporwave_flavours._%2848475685782%29.png/640px-%22Evolution%22_and_life_in_vaporwave_flavours._%2848475685782%29.png";
             }
         }
-
     },
-
     emits: ["searchName"]
 }
 
 </script>
 
 <template>
+
     <div class="main-box">
         <div class="box-title">
             <h1 class="title"><em>MOVIE$ &#169; </em></h1>
         </div>
         <div class="container-movies">
+            <!-- Card Movie -->
             <div class="movie flip-card" v-for="movie in store.movies">
                 <div class="flip-card-inner">
+                     <!-- Img -->
                     <div class="flip-card-front">
                         <div><img :src="getImage(movie)" alt="Poster" /></div>
                     </div>
-                    <div class="flip-card-back">
-                        <h4> {{ movie.title }}</h4>
-                        <div>{{ movie.original_title }}</div>
-                        <div>{{ movie.original_language }}</div>
-                        <div><country-flag :country='getLanguage(movie)' size='small' /></div>
-                        <font-awesome-icon icon="fa-solid fa-star" v-for="star in getVote(movie)" />
-                        <font-awesome-icon icon="fa-regular fa-star" v-for="star in 5 - getVote(movie)" />
+                     <!-- Img -->
+                     <!-- Descrizione -->
+                    <div class="flip-card-back ">
+                        <div class="padding-30">
+                            <h1>{{ movie.title }}</h1>
+                            <h4>{{ movie.original_title }}</h4>
+                        </div>
+                        <div>
+                            <h4>{{ movie.original_language }}</h4>
+                            <country-flag :country='getLanguage(movie)' size='small' />
+                        </div>
+                        <div class="color_pink">
+                            <font-awesome-icon icon="fa-solid fa-star" v-for="star in getVote(movie)" />
+                            <font-awesome-icon icon="fa-regular fa-star" v-for="star in 5 - getVote(movie)" />
+                        </div>
                     </div>
+                     <!-- Descrizione -->
                 </div>
             </div>
+            <!-- Card Movie -->
         </div>
     </div>
+
 </template>
 
 <style lang="scss" scoped>
+/* common */
+
+.padding-30 {
+    padding: 30px 0;
+}
+
+.color_pink {
+    color: #ff00c1;
+}
+
+/* common */
+
 .container-movies {
     background-color: #ff00c1;
     display: flex;
@@ -85,23 +109,20 @@ export default {
         align-items: center;
         width: calc(100% / 5 - 1.25rem);
     }
-
 }
 
 .box-title {
     width: 100%;
     background-color: #00b8ff;
     border: 2px solid #ff00c1;
-    padding: 20px 0 ;
+    padding: 20px 0;
 }
 
 .title {
     text-align: center;
-    
+
     color: #ff00c1;
 }
-
-
 
 .flip-card {
     background-color: transparent;
@@ -110,7 +131,6 @@ export default {
     perspective: 1000px;
 }
 
-/* This container is needed to position the front and back side */
 .flip-card-inner {
     position: relative;
     width: 100%;
@@ -120,12 +140,10 @@ export default {
     transform-style: preserve-3d;
 }
 
-/* Do an horizontal flip when you move the mouse over the flip box container */
 .flip-card:hover .flip-card-inner {
     transform: rotateY(180deg);
 }
 
-/* Position the front and back side */
 .flip-card-front,
 .flip-card-back {
     position: absolute;
@@ -135,12 +153,6 @@ export default {
     backface-visibility: hidden;
 }
 
-/* .flip-card-front {
-   
-    color: black;
-} */
-
-/* Style the back side */
 .flip-card-back {
     background-color: #9600ff;
     width: 100%;
@@ -149,5 +161,4 @@ export default {
     border-radius: 10px;
     transform: rotateY(180deg);
 }
-
 </style>

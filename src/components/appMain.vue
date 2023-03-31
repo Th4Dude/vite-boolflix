@@ -5,7 +5,7 @@ import seriesCard from './seriesCard.vue';
 
 export default {
     name: 'Main',
-    components:{
+    components: {
         movieApp,
         seriesCard,
     }
@@ -14,15 +14,19 @@ export default {
 </script>
 
 <template>
-
+    <!-- component connection -->
     <movieApp></movieApp>
     <seriesCard></seriesCard>
-    <div class="footer"><h1>Enjoy it!!</h1></div>
-
+    <!-- component connection -->
+    <!-- footer -->
+    <div class="footer">
+        <h1>Enjoy it!!</h1>
+    </div>
+    <!-- footer -->
 </template>
 
 <style lang="scss" scoped>
-.footer{
+.footer {
     background-color: #f9ac53;
     font-size: 72px;
     height: 100%;
@@ -31,13 +35,8 @@ export default {
     justify-content: center;
     align-items: center;
     padding-top: 40px;
-
-    h1{
-       color: #ff00c1;
+    h1 {
+        color: #ff00c1;
     }
-
-
 }
-
-
 </style>
