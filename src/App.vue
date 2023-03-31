@@ -5,7 +5,6 @@ import { store } from './store';
 import appMain from './components/appMain.vue';
 import appHeader from './components/appHeader.vue';
 
-
 export default {
     name: 'App',
     components: {

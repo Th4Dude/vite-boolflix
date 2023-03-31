@@ -21,8 +21,16 @@ export default {
             }
         },
         getVote(movie){
-            return movie.vote_average / 2;
+            return Math.ceil(movie.vote_average / 2) ;
+        },
+        getImage(movie) {
+            if (movie.poster_path) {
+                return `${store.config.url_img}${movie.poster_path}`;
+            } else {
+                return "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d1/Image_not_available.png/640px-Image_not_available.png";
+            }
         }
+
     },
 
     emits: ["searchName"]
@@ -37,6 +45,7 @@ export default {
         <li v-for="movie in store.movies">
             <h4> {{ movie.title }}</h4>
             <ul>
+                <li><img :src="getImage(movie)" alt="Poster" /></li>
                 <li>{{ movie.original_title }}</li>
                 <li>{{ movie.original_language }}</li>
                 <li><country-flag :country='getLanguage(movie)' size='small' /></li>

@@ -22,7 +22,14 @@ export default {
             }
         },
         getVote(serie){
-            return serie.vote_average / 2;
+            return Math.ceil(serie.vote_average / 2);
+        },
+        getImage(serie) {
+            if (serie.poster_path) {
+                return `${store.config.url_img}${serie.poster_path}`;
+            } else {
+                return "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d1/Image_not_available.png/640px-Image_not_available.png";
+            }
         }
     },
 
@@ -40,6 +47,7 @@ export default {
         <li v-for="serie in store.series">
             <h4> {{ serie.name }}</h4>
             <ul>
+                <li><img :src="getImage(serie)" alt="Poster" /></li>
                 <li>{{ serie.original_name }}</li>
                 <li>{{ serie.original_language }}</li>
                 <li><country-flag :country='getLanguage(serie)' size='small' /></li>
