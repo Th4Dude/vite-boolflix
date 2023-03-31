@@ -27,7 +27,7 @@ export default {
             if (movie.poster_path) {
                 return `${store.config.url_img}${movie.poster_path}`;
             } else {
-                return "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d1/Image_not_available.png/640px-Image_not_available.png";
+                return "https://upload.wikimedia.org/wikipedia/commons/thumb/5/5e/%22Evolution%22_and_life_in_vaporwave_flavours._%2848475685782%29.png/640px-%22Evolution%22_and_life_in_vaporwave_flavours._%2848475685782%29.png";
             }
         }
 
@@ -69,9 +69,10 @@ export default {
     background-color:  #ff00c1;
     display: flex;
     flex-wrap: wrap;
+    justify-content: space-between;
     height: 100%;
     width: 100%;
-
+    padding: 30px 10px;
     img {
         max-height: 100%;
         width: 100%;
@@ -80,9 +81,9 @@ export default {
 
     .movie {
         display: flex;
-        justify-content: center;
+        justify-content: space-around;
         align-items: center;
-        width: calc(100% / 5);
+        width: calc(100% / 5 - 1.25rem);
     }
     
 }
@@ -101,7 +102,6 @@ export default {
     background-color: transparent;
     width: 100%;
     height: 614px;
-    border: 1px solid #f1f1f1;
     perspective: 1000px;
     /* Remove this if you don't want the 3D effect */
 }
@@ -140,8 +140,9 @@ export default {
 
 /* Style the back side */
 .flip-card-back {
-    background-color: #ff00c1;
+    background-color: #9600ff;
     color: white;
+    border-radius: 10px;
     transform: rotateY(180deg);
 }
 </style>
