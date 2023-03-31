@@ -17,7 +17,7 @@ export default {
     <div class="main_container">
 
         <div class="flex-justify-content padding-top-15 box">
-           <h1 class="color_red">VAPORWAVE-FLIX</h1>
+           <h1 class="color_red">VAPORFLIX</h1>
         </div>
         <div class=" padding-top-15 ">
             <form class="box flex-justify-content" @submit.prevent="$emit('searchName')">
@@ -55,6 +55,10 @@ export default {
 
 .main_container {
     background-color: #9600ff ;
+    background-image: url(https://c4.wallpaperflare.com/wallpaper/500/442/354/outrun-vaporwave-hd-wallpaper-preview.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+
     height: 200px;  
     width: 100%;
    
