@@ -58,6 +58,7 @@ export default {
     background-image: url(https://c4.wallpaperflare.com/wallpaper/500/442/354/outrun-vaporwave-hd-wallpaper-preview.jpg);
     background-size: cover;
     background-repeat: no-repeat;
+    background-position: center;
 
     height: 200px;  
     width: 100%;
@@ -66,15 +67,16 @@ export default {
 
 button{
     background-color:#4900ff;
-    border: none;
+    border: 2px solid #ff00c1;
     border-radius: 10px;
     width: 70px;
     height: 30px;
     margin-left: 15px;
+    color: #ff00c1;
 }
 input{
     background-color: #4900ff;
-    border: none;
+    border: 2px solid #ff00c1;
     border-radius: 10px;
     height: 30px;
     width: 40%;

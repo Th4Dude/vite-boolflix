@@ -40,7 +40,9 @@ export default {
 
 <template>
     <div class="main-box">
-        <h1>MOVIES</h1>
+        <div class="box-title">
+            <h1 class="title" >MOVIES</h1>
+        </div>
         <div class="container-movies">
             <div class="movie flip-card" v-for="movie in store.movies">
                 <div class="flip-card-inner">
@@ -58,14 +60,13 @@ export default {
                 </div>
             </div>
         </div>
-
     </div>
 </template>
 
 <style lang="scss" scoped>
 
 .container-movies {
-    background-color: #00b8ff;
+    background-color:  #ff00c1;
     display: flex;
     flex-wrap: wrap;
     height: 100%;
@@ -83,12 +84,23 @@ export default {
         align-items: center;
         width: calc(100% / 5);
     }
+    
 }
+.box-title{
+        width: 100%;
+        background-color: #00b8ff;
+        border: 2px solid #ff00c1;
+    }
+    .title{
+        text-align: center;
+    }
+
+
 
 .flip-card {
     background-color: transparent;
     width: 100%;
-    height: 615px;
+    height: 614px;
     border: 1px solid #f1f1f1;
     perspective: 1000px;
     /* Remove this if you don't want the 3D effect */
