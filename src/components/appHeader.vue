@@ -21,7 +21,7 @@ export default {
         <div class=" padding-top-15 ">
             <!-- search bar+ button -->
             <form class="box flex-justify-content" @submit.prevent="$emit('searchName')">
-                <input type="text" placeholder="Search Film" v-model="store.searchText">
+                <input type="text" placeholder="Search a movie or a series" v-model="store.searchText">
                 <button type="submit">Search</button>
             </form>
              <!-- search bar+ button -->
