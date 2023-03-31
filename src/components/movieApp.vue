@@ -51,7 +51,6 @@ export default {
                 <li><country-flag :country='getLanguage(movie)' size='small' /></li>
                 <font-awesome-icon icon="fa-solid fa-star" v-for="star in getVote(movie)" />
                 <font-awesome-icon icon="fa-regular fa-star" v-for="star in 5-getVote(movie)" />
-                
             </ul>
         </li>
     </ul>
